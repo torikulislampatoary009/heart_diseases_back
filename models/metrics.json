@@ -1,0 +1,81 @@
+{
+  "rows": 303,
+  "target_recall": 0.95,
+  "test_rows": 61,
+  "sklearn_version": "1.6.1",
+  "results": {
+    "logistic_regression": {
+      "best_params": {
+        "model__C": 1
+      },
+      "cv_roc_auc": 0.9082,
+      "test_roc_auc": 0.9578,
+      "test_at_threshold": {
+        "threshold": 0.18,
+        "recall_sensitivity": 1.0,
+        "specificity": 0.5758,
+        "precision": 0.6667,
+        "accuracy": 0.7705,
+        "false_negatives": 0,
+        "false_positives": 14,
+        "true_positives": 28,
+        "true_negatives": 19
+      },
+      "test_at_0.5": {
+        "threshold": 0.5,
+        "recall_sensitivity": 0.9286,
+        "specificity": 0.8182,
+        "precision": 0.8125,
+        "accuracy": 0.8689,
+        "false_negatives": 2,
+        "false_positives": 6,
+        "true_positives": 26,
+        "true_negatives": 27
+      }
+    },
+    "svm": {
+      "best_params": {
+        "model__C": 1,
+        "model__gamma": 0.01
+      },
+      "cv_roc_auc": 0.9054,
+      "test_roc_auc": 0.9578,
+      "test_at_threshold": {
+        "threshold": 0.155,
+        "recall_sensitivity": 1.0,
+        "specificity": 0.5455,
+        "precision": 0.6512,
+        "accuracy": 0.7541,
+        "false_negatives": 0,
+        "false_positives": 15,
+        "true_positives": 28,
+        "true_negatives": 18
+      },
+      "test_at_0.5": {
+        "threshold": 0.5,
+        "recall_sensitivity": 0.9286,
+        "specificity": 0.8182,
+        "precision": 0.8125,
+        "accuracy": 0.8689,
+        "false_negatives": 2,
+        "false_positives": 6,
+        "true_positives": 26,
+        "true_negatives": 27
+      }
+    },
+    "combined_either_model": {
+      "test_at_threshold": {
+        "threshold": 0.5,
+        "recall_sensitivity": 1.0,
+        "specificity": 0.4848,
+        "precision": 0.6222,
+        "accuracy": 0.7213,
+        "false_negatives": 0,
+        "false_positives": 17,
+        "true_positives": 28,
+        "true_negatives": 16,
+        "rule": "flag if either model is at or above its threshold"
+      }
+    }
+  }
+}
