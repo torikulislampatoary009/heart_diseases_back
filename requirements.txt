@@ -1,0 +1,11 @@
+Flask==3.1.0
+flask-cors==5.0.0
+gunicorn==23.0.0
+PyMySQL==1.1.1
+cryptography==43.0.3
+python-dotenv==1.0.1
+joblib
+numpy
+scipy
+# scikit-learn is installed by the build command, pinned to the exact version
+# your model was trained with (see models/sklearn_version.txt)
